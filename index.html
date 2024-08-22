@@ -1,7 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Selena Eillen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Black+Ops+One&family=Sixtyfour&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Sixtyfour&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="video_fondo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="overlay">
+        <h1 class="sixtyfour-letraretro">Bienvenidx a mi Portfolio</h1>
+        <p class="black-ops-one-regular"> Mi nombre es Selena Castro.</p>
+
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-8dcd37215bd3efebff45d4b3005e90b5-c" alt="Anatomía dllo web" id="imagenConInfoDllo" />
+    </div>
+
+    <div class="additional-content">
+        <h2 class="sixtyfour-letraretro">Más sobre mí:</h2>
+        <p  class="sixtyfour-letraretro"> Estoy prendiendo sobre desarrollo web.</p>
+        <p  class="sixtyfour-letraretro"> Me gusta también el diseño gráfico.</p>
+    </div>
+
+    <footer id="contacto"> 
+        <p> Contacto: </p>
+        <p> Instagram: <a href="http://www.instagram.com/selenaeillen">Selena Eillen</a> </p>
+        </p> Correo: <a href="mailto:selenaeillen@hotmail.com">selenaeillen@hotmail.com</a></p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        var img = document.getElementById("imagenConInfoDllo");
+        var modal = document.getElementById("modal");
+        var modalImg = document.getElementById("modal-img");
+        var span = document.getElementsByClassName("close")[0];
+
+        
+    img.onclick = function() {
+    modal.style.display = "flex"; 
+    modalImg.src = this.src;
+}
+
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    </script>
+
 </body>
 </html>
