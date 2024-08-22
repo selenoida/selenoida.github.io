@@ -3,36 +3,34 @@ html, body {
     margin: 0;
     overflow-x: hidden; 
     overflow-y: auto; 
+    box-sizing: border-box;
 }
 
 .black-ops-one-regular {
-    font-family: "Black Ops One", system-ui;
+    font-family: "Black Ops One", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }  
+}
 
 .sixtyfour-letraretro {
-  font-family: "Sixtyfour", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "BLED" 0,
-    "SCAN" 0;
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "BLED" 0, "SCAN" 0;
 }
 
 .syncopate-regular {
     font-family: "Syncopate", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
+
 .syncopate-bold {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
-  
+}
 
 .video-background {
     position: fixed;
@@ -41,101 +39,69 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .overlay {
-    position: relative; 
-    top: 9%;
+    position: relative;
+    top: 10%;
     left: 50%;
-    transform: translateX(-50%); 
-    background-color: rgba(0, 0, 0, 0.5); 
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: rgb(170, 178, 185);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    max-width: 800px; 
-    z-index: 1; 
-    width: 80%; 
-    min-width: 300px; 
-    height: 100vh; 
-    box-sizing: border-box; 
+    max-width: 800px;
+    width: 80%;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+#imagenDecorativa1 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(68, 0, 255, 0.5);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
 }
 
 .additional-content {
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    max-width: 80%; 
-    margin: 20px auto; 
+    max-width: 800px;
+    margin: 20px auto;
+    box-sizing: border-box;
     position: relative;
-    z-index: 1; 
-    margin-top: 100vh; 
-    box-sizing: border-box; 
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
     text-align: center;
-    position: relative;
-    z-index: 1; 
-}
-
-#imagenConInfoDllo {
-    width: 95%; 
-    height: auto; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(68, 0, 255, 0.5); 
-    cursor: pointer;
- }
-
- .modal {
-    display: none;
-    position: fixed; 
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
- .modal-content {
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(68, 0, 255, 0.5); 
-}
-
-.close {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
