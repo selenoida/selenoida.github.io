@@ -13,11 +13,20 @@ html, body {
 }
 
 .sixtyfour-letraretro {
+    overflow: hidden;
     font-family: "Sixtyfour", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "BLED" 0, "SCAN" 0;
+}
+
+.sixtyfour-letraretroTitulo {
+    overflow: hidden;
+    font-family: "Sixtyfour", sans-serif;
+    font-style: normal;
+    text-align: center;
+    width: 100%;
 }
 
 .syncopate-regular {
@@ -95,7 +104,7 @@ html, body {
     margin-bottom: 80px;
 }
 
-footer {
+/*#footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
@@ -104,4 +113,100 @@ footer {
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+}*/
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    width: 150px; /* Ancho de la solapa cuando está contraída */
+    height: 50px; /* Altura cuando está contraída */
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semitransparente */
+    color: white;
+    text-align: center;
+    transition: width 0.3s ease, height 0.3s ease;
+    overflow: hidden;
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#contacto {
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box; /* Asegúrate de que el tamaño incluya padding y border */
+}
+
+#contacto:hover {
+    width: 300px; /* Ancho cuando está expandido */
+    height: auto; /* Ajusta la altura cuando está expandido */
+}
+
+.contact-content {
+    display: none; /* Inicialmente oculto */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para el contenido */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    z-index: 1001; /* Asegúrate de que esté por encima del pie de página */
+    color: white; /* Color del texto */
+    transition: opacity 0.3s ease, height 0.3s ease; /* Transiciones suaves */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+#contacto:hover .contact-content {
+    display: block; /* Muestra el contenido cuando está expandido */
+    opacity: 1; /* Hace visible el contenido al pasar el mouse */
+}
+
+.contact-content p {
+    margin: 10px 0;
+}
+
+.contact-content a {
+    color: #ff8800;
+    text-decoration: none;
+}
+
+.contact-content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        height: auto; /* Ajusta la altura según el contenido */
+        bottom: 0;
+        left: 0;
+        transform: none; /* Elimina la transformación en pantallas pequeñas */
+        border-radius: 0; /* Sin bordes redondeados en móviles */
+    }
+
+    #contacto {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        height: auto;
+    }
+
+    #contacto:hover {
+        width: 100%; /* Mantiene el ancho al 100% cuando está expandido en móviles */
+        height: auto;
+    }
+
+    .contact-content {
+        padding: 10px;
+    }
+    
+    .sixtyfour-letraretroTitulo {
+        font-size: 6vw; 
+        word-wrap: break-word;
+    }
+    #background-video {
+      height: 50vh;
+    }
+
 }
